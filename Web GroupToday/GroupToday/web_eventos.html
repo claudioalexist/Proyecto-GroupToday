@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Eventos</title>
+    <style>
+        
+        div.portada {
+        
+            text-align: center;
+            width: 100%;
+            
+       
+          }
+        div.navbar{
+          position: relative;
+        }
+        
+     
+          div.crear {
+          
+          position: relative;
+          left:100px;
+          
+          
+          
+          }
+          .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+          left: 300px;
+          
+          
+          }
+          
+          .switch input { 
+          opacity: 0;
+          width: 0;
+          height: 0;
+          }
+          
+          .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+          }
+          
+          .slider::before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+          }
+        
+          
+          input:checked + .slider {
+          background-color: #2196F3;
+          }
+          
+          input:focus + .slider {
+          box-shadow: 0 0 1px #2196F3;
+          }
+          
+          input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+          }
+          
+          /* Rounded sliders*/
+          .slider.round {
+          border-radius: 34px;
+          }
+          
+          .slider.round:before {
+          border-radius: 50%;
+          }
+          
+          div.textoevento{
+            position: relative;
+            
+            
+          }
+          
+          div.textogrupo{
+          position: relative;
+          
+          }
+          div.containerGroup{
+                    margin: 100px;
+                }
+                div#Card{
+                    width: 281px; 
+                    height: 336px; 
+                    margin: 5px;
+                    border: 1px solid rgb(218, 218, 218); 
+                    border-radius:4px;
+                }
+    
+                div.TextContenido{
+                    margin: 10px;
+                    width: 255px;
+                    height: 140px;
+                }
+    
+                div.descripText p {
+                    width: 253px;
+                    height: 55px;
+                    margin-top: -10px;
+                    padding: 2px 2px;
+                    /*white-space:nowrap;*/
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+          
+          </style>
+  </head>
+
+<body>
+    <div class="container">
+        <div class="portada"> 
+          <div class="p-3 mb-2 bg-info text-white"> <h1>Descubre tus próximos eventos</h1></div>
+          </div>
+        
+        <div class="navbar navbar-light bg-light">
+            <nav>
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </nav>
+
+            <div class="crear">
+                  <a href="crear_evento.html">Crear Evento</a> 
+            </div>
+                      <!----------------Boton Switch de eventos a grupos--------------------------------------------->
+        <label class="switch">
+               <input type="checkbox" value="Grupo" onClick="location.href='Grupos.html'"/>
+               <span class="slider round"></span>
+        </label>
+           
+            
+                      <!----------------Texto eventos y grupo------------------------------------------------->               
+                <div class="textoevento">
+                  <h6>Eventos</h6>
+                </div>  
+
+                <div class="textogrupo">
+                  <h6>Grupos</h6>
+                </div>
+        </div>
+<!------------------------------------------Muestra de Eventos------------------------------------------------>
+        <div class="containerGroup">
+          <!-- Fila de eventos-->
+          <div class="row">
+              <!-- Tarjeta de evento-->
+              <div id="Card" class="col->=lg-4">
+                  <!-- Imagen-->
+                  <img src="https://picsum.photos/280/130" style="border-top-right-radius:3px;">
+                  <!-- Contenido -->
+                  <div class="TextContenido">
+                          <p class="text-lg-left" style=" font-weight: bold;">Titulo Evento</p>
+                      <div class="descripText">
+                          <p>Pequeña desc regregrgegergrei, pcefefefefeión del tyrtyrtyrtyrrtyryrytry Pequeña descripción del evento Pequeña des evento</p>
+                      </div>
+                      <button class="btn btn-primary" type="submit">Ver mas</button>
+                  </div>
+                  <div class="card-footer">
+                      <small class="text-muted">234 participantes</small>
+                  </div>
+              </div>
+
+              <div id="Card" class="col->=lg-4">
+                      <img src="https://picsum.photos/280/130" style="border-top-right-radius:3px;">
+                      <div class="TextContenido">
+                          <p class="text-lg-left" style=" font-weight: bold;">Titulo Evento</p>
+                          <div class="descripText">
+                              <p class="overflow-ellipsis" >Pequeña descripción del evento Pequeña descripción delevento Pequeña descripción del evento</p>
+                          </div>
+                          <button class="btn btn-primary" type="submit">Ver mas</button>
+                      </div>
+                      <div class="card-footer">
+                          <small class="text-muted">234 participantes</small>
+                      </div>
+              </div>
+
+              <div id="Card" class="col->=lg-4">
+                      <img src="https://picsum.photos/280/130" style="border-top-right-radius:3px;">
+                      <div class="TextContenido">
+                          <p class="text-lg-left" style=" font-weight: bold;">Titulo Evento</p>
+                          <div class="descripText">
+                              <p class="text-lg-left">Pequeña descripción del evento Pequeña descripción del evento Pequeña descripción del evento</p>
+                          </div>
+                          <button class="btn btn-primary" type="submit">Ver mas</button>
+                      </div>
+                      <div class="card-footer">
+                          <small class="text-muted">234 participantes</small>
+                      </div>
+              </div>
+
+              <div id="Card" class="col->=lg-4">
+                      <img src="https://picsum.photos/280/130" style="border-top-right-radius:3px;">
+                      <div class="TextContenido">
+                          <p class="text-lg-left" style=" font-weight: bold;">Titulo Evento</p>
+                          <div class="descripText">
+                              <p class="text-lg-left">Pequeña descripción del evento Pequeña descripción del evento Pequeña descripción del evento</p>
+                          </div>
+                          <button class="btn btn-primary" type="submit">Ver mas</button>
+                      </div>
+                      <div class="card-footer">
+                          <small class="text-muted">234 participantes</small>
+                      </div>
+              </div>
+
+
+              <div id="Card" class="col->=lg-4">
+                      <img src="https://picsum.photos/280/130" style="border-top-right-radius:3px;">
+                      <div class="TextContenido">
+                          <p class="text-lg-left" style=" font-weight: bold;">Titulo Evento</p>
+                          <div class="descripText">
+                              <p class="text-lg-left">Pequeña descripción del evento Pequeña descripción del evento Pequeña descripción del evento</p>
+                          </div>
+                          <button class="btn btn-primary" type="submit">Ver mas</button>
+                      </div>
+                      <div class="card-footer">
+                          <small class="text-muted">234 participantes</small>
+                      </div>
+              </div>
+
+
+              <div id="Card" class="col->=lg-4">
+                      <img src="https://picsum.photos/280/130" style="border-top-right-radius:3px;">
+                      <div class="TextContenido">
+                          <p class="text-lg-left" style=" font-weight: bold;">Titulo Evento</p>
+                          <div class="descripText">
+                              <p class="text-lg-left">Pequeña descripción del evento Pequeña descripción del evento Pequeña descripción del evento</p>
+                          </div>
+                          <button class="btn btn-primary" type="submit">Ver mas</button>
+                      </div>
+                      <div class="card-footer">
+                          <small class="text-muted">234 participantes</small>
+                      </div>
+              </div>
+
+              <div id="Card" class="col->=lg-4">
+                      <img src="https://picsum.photos/280/130" style="border-top-right-radius:3px;">
+                      <div class="TextContenido">
+                          <p class="text-lg-left" style=" font-weight: bold;">Titulo Evento</p>
+                          <div class="descripText">
+                              <p class="text-lg-left" >Pequeña descripción del evento Pequeña descripción del evento Pequeña descripción del evento</p>
+                          </div>
+                          <button class="btn btn-primary" type="submit">Ver mas</button>
+                      </div>
+                      <div class="card-footer">
+                          <small class="text-muted">234 participantes</small>
+                      </div>
+              </div>
+
+              <div id="Card" class="col->=lg-4">
+                      <img src="https://picsum.photos/280/130" style="border-top-right-radius:3px;">
+                      <div class="TextContenido">
+                          <p class="text-lg-left" style=" font-weight: bold;">Titulo Evento</p>
+                          <div class="descripText">
+                              <p class="text-lg-left">Pequeña descripción del evento Pequeña descripción del evento Pequeña descripción del evento</p>
+                          </div>
+                          <button class="btn btn-primary" type="submit">Ver mas</button>
+                      </div>
+                      <div class="card-footer">
+                          <small class="text-muted">234 participantes</small>
+                      </div>
+              </div>
+
+              
+          </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

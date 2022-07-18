@@ -1,0 +1,146 @@
+<html lang="en">
+    <head>
+            <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+            <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <title>Crear Grupo</title>
+
+        <style>
+            body{
+                background:white;
+            }
+            h1.titulo{
+              text-align: center;
+            }
+            p.text-lg-left{
+              background-color: white;
+            }
+
+            section {
+              height: 300px;
+              margin: 40px;
+              background-color: rgb(228, 228, 228);
+              color: rgb(3, 41, 97);
+              border-radius: 5px;
+            }
+            section div#Section{
+              padding: 120px;
+              text-align: center;
+            }
+
+            div.menu{
+              position: fixed;
+              bottom: 40%;
+              left: -25px;
+            }
+            div.icono i{
+              color: rgb(11, 106, 168);
+            }
+            div.icono i:hover{
+              color: rgb(3, 41, 97);
+              margin-left: 2px;
+            }
+            
+
+            /*------Contenido-------*/
+            div.contenedor{
+                position: relative;
+                margin-left: 30%;
+                margin-right: 30%;
+                margin-top:50px;
+                text-align: center;
+            }
+            div.imagenPortada{
+                text-align: center;
+                margin-top: 30px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="imagenPortada">
+            <img src="Diseño/ImgCrearGrupo/450_1000.jpg">
+        </div>
+        <h4 style="text-align:center; color:rgb(0, 89, 255)">CREA UN GRUPO</h4>
+        
+        <!--Barra lateral-->
+        <div class="Menu">
+            <ul>
+                <a href="#seccion1">
+                  <div class="icono">
+                      <i class="fa-1x fab fa-ethereum"></i>
+                  </div>
+                </a><br>
+
+                <a href="#seccion2">
+                  <div class="icono">
+                      <i class="fa-1x fab fa-ethereum"></i>
+                  </div>
+                </a><br>
+
+                <a href="#seccion3">
+                  <div class="icono">
+                      <i class="fa-1x fab fa-ethereum"></i>
+                  </div>
+                </a><br>
+
+                <a href="#seccion4">
+                    <div class="icono">
+                        <i class="fa-1x fab fa-ethereum"></i>
+                    </div>
+                </a><br>
+            </ul>
+        </div>
+     
+        <!--Seciones-->
+        <section class="zona1">
+            <a name="seccion1"></a>
+              <div class="form-group" id="Section">
+                <h5>¿Como de llamará el grupo?</h5>
+                  <label asp-for="Movie.Title" class="control-label"></label>
+                  <input asp-for="Movie.Title" class="form-control" />
+                  <span asp-validation-for="Movie.Title" class="text-danger"></span>
+              </div>
+        </section>
+     
+        <section class="zona2">
+            <a name="seccion2"></a>
+              <div class="form-group" id="Section">
+                  <h5>¿Cuando tendrá lugar el evento?</h5>
+                  <label asp-for="Movie.ReleaseDate" class="control-label"></label>
+                  <input asp-for="Movie.ReleaseDate" class="form-control" />
+                  <span asp-validation-for="Movie.ReleaseDate" class="text-danger"></span>
+              </div>
+        </section>
+     
+        <section class="zona3">
+            <a name="seccion3"></a>
+            <div class="form-group" id="Section">
+                <h5>¿De que se trata?</h5>
+                <label asp-for="Movie.Descripcion" class="control-label"></label>
+                <input asp-for="Movie.Descripcion" class="form-control" />
+                <span asp-validation-for="Movie.Descripcion" class="text-danger"></span>
+            </div>
+        </section>
+     
+        <section class="zona4">
+            <a name="seccion4"></a>
+            <div class="form-group" id="Section">
+                <h4>Punto de encuentro</h4>
+                <label asp-for="Movie.Direccion" class="control-label"></label>
+                <input asp-for="Movie.Direccion" class="form-control" />
+                <span asp-validation-for="Movie.Direccion" class="text-danger"></span>
+            </div>
+        </section>
+     
+        <a href="#top"><div style="position:relative; bottom: -201px; width: 100%; height: 50px; background: cornflowerblue;"><h2 style="text-align:center;">Subir</h2></div></a>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html> 
